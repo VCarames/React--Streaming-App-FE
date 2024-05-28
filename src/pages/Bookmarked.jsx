@@ -1,9 +1,12 @@
+import Header from "../components/header/Header";
+
 function Bookmarked() {
   return (
-    <div>
+    <>
+      <Header />
       <h1>Bookmarked Page</h1>
       <p>This is the "Bookmarked" page</p>
-    </div>
+    </>
   );
 }
 
