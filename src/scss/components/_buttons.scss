@@ -1,0 +1,23 @@
+.button {
+  min-width: 10ch;
+  min-height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--font-size-15);
+  font-weight: var(--font-weight-400);
+  text-align: center;
+  color: var(--neutral-clr-one);
+
+  background: var(--primary-clr-one);
+
+  &:is(:hover, :focus, :focus-visible) {
+    color: var(--primary-clr-three);
+
+    background: var(--primary-hover-one);
+
+    transition: 0.8s all;
+  }
+}

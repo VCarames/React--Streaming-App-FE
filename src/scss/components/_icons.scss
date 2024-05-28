@@ -1,0 +1,7 @@
+.icon {
+  fill: var(--primary-clr-four);
+
+  &:is(:hover, :focus, :focus-visible) {
+    fill: var(--primary-clr-one);
+  }
+}
