@@ -1,0 +1,16 @@
+.nav {
+  justify-self: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (min-width: 760px) {
+    }
+
+    @media (min-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+}
