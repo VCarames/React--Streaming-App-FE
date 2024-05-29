@@ -1,0 +1,39 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 0 16px;
+
+  transition: 0.8s all;
+
+  @media (min-width: 760px) {
+    gap: 24px;
+
+    padding: 0 24px 0 25px;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+
+    color: var(--neutral-clr-one);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-400);
+
+    padding: 10px 10px 10px 10px;
+
+    background-color: transparent;
+  }
+}
+
+::placeholder {
+  color: var(--neutral-clr-one);
+  font-size: 16px;
+  font-weight: 400;
+
+  opacity: 0.4979;
+}
