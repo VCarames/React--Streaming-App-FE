@@ -2,8 +2,12 @@
 @use "base/typography";
 @use "base/colors";
 
+@use "layout/body";
+
 @use "components/buttons";
 @use "components/icons";
 
 @use "header/header";
 @use "header/navbar";
+
+@use "searchbar/searchbar";
