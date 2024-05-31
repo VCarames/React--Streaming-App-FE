@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/header/Header.jsx";
 import SearchBar from "../components/searchbar/Searchbar";
+import TVSeriesList from "../components/lists/TVSeriesList.jsx";
 
 function TVSeries() {
   return (
@@ -10,6 +11,12 @@ function TVSeries() {
         labelText="Search for TV series"
         placeholderText="Search for TV series"
       />
+      <main>
+        <section className="tvseries">
+          <h2 className="tvseries__heading">TV Series</h2>
+          <TVSeriesList />
+        </section>
+      </main>
     </div>
   );
 }
