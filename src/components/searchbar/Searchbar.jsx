@@ -5,7 +5,7 @@ function Searchbar({ labelText, placeholderText }) {
     <div className="searchbar">
       <img
         className="searchbar__icon"
-        src="src/assets/assets/icons/icon-search.svg"
+        src="src/assets/icons/icon-search.svg"
         alt=""
       />
       <form className="searchbar__form">
