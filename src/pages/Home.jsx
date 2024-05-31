@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header/Header";
 import SearchBar from "../components/searchbar/Searchbar";
 import Trending from "../components/trending/Trending";
+import Recommended from "../components/recommended/Recommended";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       />
       <main>
         <Trending />
+        <Recommended />
       </main>
     </div>
   );
