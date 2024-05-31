@@ -1,19 +1,16 @@
-import Header from "../components/header/Header";
-import Searchbar from "../components/searchbar/Searchbar";
+import React from "react";
+import Header from "../components/header/Header.jsx";
+import SearchBar from "../components/searchbar/Searchbar";
 
 function TVSeries() {
   return (
-    <>
+    <div className="layout">
       <Header />
-      <Searchbar
+      <SearchBar
         labelText="Search for TV series"
         placeholderText="Search for TV series"
       />
-      <main>
-        <h1>TVSeries Page</h1>
-        <p>This is the "TVSeries" page</p>
-      </main>
-    </>
+    </div>
   );
 }
 

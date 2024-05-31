@@ -1,19 +1,16 @@
-import Header from "../components/header/Header";
-import Searchbar from "../components/searchbar/Searchbar";
+import React from "react";
+import Header from "../components/header/Header.jsx";
+import SearchBar from "../components/searchbar/Searchbar";
 
 function Movies() {
   return (
-    <>
+    <div className="layout">
       <Header />
-      <Searchbar
+      <SearchBar
         labelText="Search for movies"
         placeholderText="Search for movies"
       />
-      <main>
-        <h1>Movies Page</h1>
-        <p>This is the "Movies" page</p>
-      </main>
-    </>
+    </div>
   );
 }
 
