@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+
   return (
     <nav className="nav" aria-label="main">
       <ul className="nav__list" role="list">
         <li className="nav__item" role="listitem">
           <Link to="/movies" className="nav__link" aria-label="Movies">
             <svg
-              className="nav__icon icon"
+              className={`nav__icon icon ${
+                location.pathname === "/movies" ? "active" : ""
+              }`}
               width="20"
               height="20"
               xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +23,9 @@ function Navbar() {
         <li className="nav__item" role="listitem">
           <Link to="/tvseries" className="nav__link" aria-label="TV Series">
             <svg
-              className="nav__icon icon"
+              className={`nav__icon icon ${
+                location.pathname === "/tvseries" ? "active" : ""
+              }`}
               width="20"
               height="20"
               xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +35,11 @@ function Navbar() {
           </Link>
         </li>
         <li className="nav__item" role="listitem">
-          <Link to="/bookmarked" className="nav__link" aria-label="Bookmarked">
+          <Link to="/bookmarks" className="nav__link" aria-label="Bookmarked">
             <svg
-              className="nav__icon icon "
+              className={`nav__icon icon ${
+                location.pathname === "/bookmarks" ? "active" : ""
+              }`}
               width="17"
               height="20"
               xmlns="http://www.w3.org/2000/svg"
