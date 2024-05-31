@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import Logo from "/src/assets/assets/logo/logo.svg";
-import Avatar from "/src/assets/assets/image-avatar.png";
+import Logo from "/src/assets/logo/logo.svg";
+import Avatar from "/src/assets/image-avatar.png";
 
 function Header() {
   return (
