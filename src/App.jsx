@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import TVSeries from "./pages/TVSeries";
-import Bookmarked from "./pages/Bookmarked";
+import Bookmarks from "./pages/Bookmarks";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="Movies" element={<Movies />} />
         <Route path="TVSeries" element={<TVSeries />} />
-        <Route path="Bookmarked" element={<Bookmarked />} />
+        <Route path="Bookmarks" element={<Bookmarks />} />
       </Routes>
     </BrowserRouter>
   );
