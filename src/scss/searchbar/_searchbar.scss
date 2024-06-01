@@ -1,9 +1,12 @@
 .searchbar {
+  grid-area: searchbar;
   display: flex;
   align-items: center;
   gap: 16px;
 
-  padding: 0 16px;
+  padding: 0 15px;
+
+  margin-bottom: 26px;
 
   transition: 0.8s all;
 
@@ -11,6 +14,10 @@
     gap: 24px;
 
     padding: 0 24px 0 25px;
+  }
+
+  @media (min-width: 1000px) {
+    margin-top: 30px;
   }
 
   &__form {
@@ -24,9 +31,20 @@
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-400);
 
-    padding: 10px 10px 10px 10px;
+    caret-color: red;
+
+    border: none;
+    outline: none;
+
+    padding: 10px 10px 10px 0;
 
     background-color: transparent;
+
+    &:focus {
+      border-bottom: 1px solid #5a698f;
+
+      transition: 0.8s all;
+    }
   }
 }
 
