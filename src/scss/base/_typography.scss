@@ -13,3 +13,38 @@
 
   --font-weight-400: 400;
 }
+
+.trending__heading,
+.recommended__heading,
+.tvseries__heading,
+.movies__heading,
+.bookmark__heading {
+  color: var(--neutral-clr-one);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.312px;
+
+  @media (min-width: 760px) {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+  }
+}
+
+.thumbnail__heading {
+  color: var(--neutral-clr-one);
+  font-size: 14px;
+  font-weight: 400;
+
+  &--trending {
+    font-size: 15px;
+  }
+
+  @media (min-width: 760px) {
+    font-size: 18px;
+
+    &--trending {
+      font-size: 24px;
+    }
+  }
+}
