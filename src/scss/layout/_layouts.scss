@@ -1,0 +1,52 @@
+body {
+  font-family: var(--font-family);
+
+  background: var(--primary-clr-two);
+}
+
+.layout {
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-areas: "header searchbar" "header main";
+    column-gap: 36px;
+    row-gap: 35px;
+
+    padding: 32px 36px 32px 32px;
+  }
+}
+
+main {
+  grid-area: main;
+  padding: 0 16px;
+
+  @media (min-width: 760px) {
+    padding: 0 24px 0 25px;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 0;
+  }
+}
+
+.trending {
+  display: grid;
+  gap: 16px;
+
+  margin-bottom: 24px;
+
+  @media (min-width: 760px) {
+    gap: 25px;
+  }
+}
+
+.recommended,
+.tvseries,
+.movies,
+.bookmark {
+  display: grid;
+  gap: 24px;
+
+  @media (min-width: 1000px) {
+    gap: 32px;
+  }
+}
