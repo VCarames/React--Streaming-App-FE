@@ -1,20 +1,26 @@
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { SearchProvider } from "/src/components/searchbar/SearchContext.jsx";
 import Home from "./pages/Home";
+import Search from "./pages/Search";
 import Movies from "./pages/Movies";
 import TVSeries from "./pages/TVSeries";
 import Bookmarks from "./pages/Bookmarks";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="Movies" element={<Movies />} />
-        <Route path="TVSeries" element={<TVSeries />} />
-        <Route path="Bookmarks" element={<Bookmarks />} />
-      </Routes>
+      <SearchProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="search" element={<Search />} />
+          <Route path="movies" element={<Movies />} />
+          <Route path="tvseries" element={<TVSeries />} />
+          <Route path="bookmarks" element={<Bookmarks />} />
+        </Routes>
+      </SearchProvider>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
