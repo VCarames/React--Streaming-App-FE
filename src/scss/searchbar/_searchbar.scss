@@ -40,7 +40,14 @@
 
     background-color: transparent;
 
+    opacity: 0.4979;
+
+    @media (min-width: 760px) {
+      font-size: var(--font-size-24);
+    }
+
     &:focus {
+      opacity: 1;
       border-bottom: 1px solid #5a698f;
 
       transition: 0.8s all;
