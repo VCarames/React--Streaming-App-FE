@@ -13,7 +13,9 @@ function Header() {
 
         <Navbar />
 
-        <img className="header__user" src={Avatar} alt="User" />
+        <Link className="header__user">
+          <img className="header__user--img" src={Avatar} alt="User" />
+        </Link>
       </div>
     </header>
   );
