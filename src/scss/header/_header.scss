@@ -1,7 +1,10 @@
 .header {
+  grid-area: header;
   padding: 0 16px;
 
   background: var(--primary-clr-three);
+
+  margin-bottom: 24px;
 
   transition: 0.8s all;
 
@@ -12,6 +15,7 @@
   }
 
   @media (min-width: 1000px) {
+    padding: 0;
   }
 
   &__content {
