@@ -7,6 +7,7 @@ import Recommended from "../components/recommended/Recommended";
 function Home() {
   return (
     <div className="layout">
+      <h1 className="visually-hidden">Home Page</h1>
       <Header />
       <SearchBar
         labelText="Search for movies or TV series"

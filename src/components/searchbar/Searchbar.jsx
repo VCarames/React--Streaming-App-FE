@@ -16,7 +16,7 @@ const SearchBar = ({ labelText, placeholderText }) => {
   return (
     <div className="searchbar">
       <img
-        className="searchbar__icon"
+        className="icon--searchbar"
         src="src/assets/icons/icon-search.svg"
         alt=""
       />

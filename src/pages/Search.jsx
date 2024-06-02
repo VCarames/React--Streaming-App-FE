@@ -16,9 +16,10 @@ const Search = () => {
         placeholderText="Search for movies or TV series"
       />
       <main>
+        <h1 className="visually-hidden">Search Page</h1>
         <section className="search">
           <h2 className="search__heading">
-            Found {searchResults.length} results for {searchQuery}
+            Found {searchResults.length} results for <span>{searchQuery}</span>
           </h2>
           <SearchResults results={searchResults} />
         </section>

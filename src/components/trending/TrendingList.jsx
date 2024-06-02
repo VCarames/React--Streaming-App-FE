@@ -41,7 +41,11 @@ function TrendingList() {
               <div className="thumbnail-trending__container--info">
                 <p className="thumbnail-trending__year">{trending.year}</p>
                 <div className="thumbnail-trending__container--category">
-                  <img src={trending.icon} alt="" />
+                  <img
+                    className="thumbnail-trending__icon"
+                    src={trending.icon}
+                    alt=""
+                  />
                   <p className="thumbnail-trending__category">
                     {trending.category}
                   </p>

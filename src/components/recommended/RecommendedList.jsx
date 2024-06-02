@@ -41,7 +41,11 @@ function RecommendedList() {
               <div className="thumbnail__category--info">
                 <p className="thumbnail__year">{recommend.year}</p>
                 <div className="thumbnail__container--category">
-                  <img src={recommend.icon} alt="" />
+                  <img
+                    className="icon--thumbnail"
+                    src={recommend.icon}
+                    alt=""
+                  />
                   <p className="thumbnail__category">{recommend.category}</p>
                 </div>
                 <p className="thumbnail__rating">{recommend.rating}</p>
