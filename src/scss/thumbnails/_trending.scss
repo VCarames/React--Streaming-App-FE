@@ -1,18 +1,18 @@
 .thumbnail-trending {
   position: relative;
 
-  max-width: 240px;
+  max-width: 15rem;
 
   display: grid;
 
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
 
   flex-shrink: 0;
   scroll-snap-align: start;
 
-  @media (min-width: 760px) {
-    max-width: 470px;
+  @media (min-width: 47.5rem) {
+    max-width: 29.38rem;
   }
 
   & > * {
@@ -23,8 +23,12 @@
   &__list {
     overflow: auto;
     display: flex;
-    gap: 16px;
+    gap: 1rem;
     scroll-snap-type: x mandatory;
+
+    @media (min-width: 47.5rem) {
+      gap: 2.5rem;
+    }
   }
 
   &__container {
@@ -34,26 +38,61 @@
 
     z-index: 1;
 
-    padding: 16px;
+    padding: 1rem 1rem 0.88rem 1rem;
+
+    @media (min-width: 47.5rem) {
+      padding: 1rem 1rem 1.31rem 1.5rem;
+    }
 
     &--info {
       display: flex;
-      gap: 20px;
+      gap: 1.19rem;
 
       opacity: 0.75;
     }
 
     &--category {
       display: flex;
-      gap: 8px;
+      align-items: center;
+      gap: 0.44rem;
     }
   }
 
   &__bookmark {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.5rem;
+    right: 0.5rem;
     background: none;
+
+    @media (min-width: 47.5rem) {
+      top: 1rem;
+      right: 1.5rem;
+    }
+  }
+
+  &__icon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &__year,
+  &__category,
+  &__rating {
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-400);
+
+    @media (min-width: 47.5rem) {
+      font-size: var(--font-size-15);
+    }
+  }
+
+  &__heading {
+    font-size: var(--font-size-15);
+    font-weight: var(--font-weight-400);
+
+    @media (min-width: 47.5rem) {
+      font-size: var(--font-size-24);
+    }
   }
 
   &__link {

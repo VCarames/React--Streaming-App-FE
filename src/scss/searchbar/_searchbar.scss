@@ -2,22 +2,24 @@
   grid-area: searchbar;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 
-  padding: 0 15px;
+  padding: 0 0.94rem 0 1rem;
 
-  margin-bottom: 26px;
+  margin-bottom: 0.75rem;
 
   transition: 0.8s all;
 
-  @media (min-width: 760px) {
-    gap: 24px;
+  @media (min-width: 47.5rem) {
+    gap: 1.5rem;
 
-    padding: 0 24px 0 25px;
+    padding: 0 1.5rem 0 1.56rem;
+    margin-bottom: 1.06rem;
   }
 
-  @media (min-width: 1000px) {
-    margin-top: 30px;
+  @media (min-width: 62.5rem) {
+    padding: 0;
+    margin-top: 1.25rem;
   }
 
   &__form {
@@ -31,24 +33,24 @@
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-400);
 
-    caret-color: red;
+    caret-color: var(--primary-clr-one);
 
     border: none;
     outline: none;
 
-    padding: 10px 10px 10px 0;
+    padding: 0.63rem 0.63rem 0.63rem 0;
 
     background-color: transparent;
 
-    opacity: 0.4979;
+    opacity: 0.5;
 
-    @media (min-width: 760px) {
+    @media (min-width: 47.5rem) {
       font-size: var(--font-size-24);
     }
 
     &:focus {
       opacity: 1;
-      border-bottom: 1px solid #5a698f;
+      border-bottom: 0.06rem solid var(--primary-clr-four);
 
       transition: 0.8s all;
     }
@@ -57,8 +59,12 @@
 
 ::placeholder {
   color: var(--neutral-clr-one);
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-400);
 
-  opacity: 0.4979;
+  opacity: 0.5;
+
+  @media (min-width: 47.5rem) {
+    font-size: 1.5rem;
+  }
 }

@@ -4,6 +4,32 @@
   &:is(:hover, :focus, :focus-visible) {
     fill: var(--primary-clr-one);
   }
+
+  &--logo {
+    max-width: 1.56rem;
+
+    @media (min-width: 62.5rem) {
+      max-width: 2rem;
+    }
+  }
+
+  &--searchbar {
+    max-width: 1.5rem;
+
+    @media (min-width: 47.5rem) {
+      max-width: 2rem;
+    }
+  }
+
+  &--thumbnail {
+    width: 0.63rem;
+    height: 0.63rem;
+
+    @media (min-width: 62.5rem) {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
 }
 
 .active {
