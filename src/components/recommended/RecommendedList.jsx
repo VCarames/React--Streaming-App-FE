@@ -10,20 +10,23 @@ function RecommendedList() {
       <ul className="thumbnail__list" role="list">
         {recommendedItems.map((recommend) => (
           <li className="thumbnail" key={recommend.title} role="listitem">
-            <picture className="thumbnail__picture">
-              <source
-                media="(min-width: 1000px)"
-                srcSet={recommend.thumbnail.regular.large}
-              />
-              <source
-                media="(min-width: 760px)"
-                srcSet={recommend.thumbnail.regular.medium}
-              />
-              <img
-                src={recommend.thumbnail.regular.small}
-                alt={`${recommend.title} thumbnail`}
-              />
-            </picture>
+            <Link
+              className="thumbnail__link"
+              to={recommend.category === "Movie" ? "/movies" : "/tv-series"}
+              aria-label={`${recommend.title} thumbnail`}
+            >
+              <picture className="thumbnail__picture">
+                <source
+                  media="(min-width: 1000px)"
+                  srcSet={recommend.thumbnail.regular.large}
+                />
+                <source
+                  media="(min-width: 760px)"
+                  srcSet={recommend.thumbnail.regular.medium}
+                />
+                <img src={recommend.thumbnail.regular.small} alt="" />
+              </picture>
+            </Link>
             <div className="thumbnail__content">
               <button className="thumbnail__bookmark">
                 {recommend.isBookmarked ? (
@@ -52,7 +55,7 @@ function RecommendedList() {
               </div>
               <h3 className="thumbnail__heading">
                 <Link
-                  className="thumbnail__link"
+                  className="thumbnail__heading--link"
                   to={recommend.category === "Movie" ? "/movies" : "/tv-series"}
                 >
                   {recommend.title}
