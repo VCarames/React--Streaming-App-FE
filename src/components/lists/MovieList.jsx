@@ -11,20 +11,23 @@ function MovieList() {
     <ul className="thumbnail__list" role="list">
       {movies.map((movie) => (
         <li className="thumbnail" key={movie.title} role="listitem">
-          <picture className="thumbnail__picture">
-            <source
-              media="(min-width: 1000px)"
-              srcSet={movie.thumbnail.regular.large}
-            />
-            <source
-              media="(min-width: 760px)"
-              srcSet={movie.thumbnail.regular.medium}
-            />
-            <img
-              src={movie.thumbnail.regular.small}
-              alt={`${movie.title} thumbnail`}
-            />
-          </picture>
+          <Link
+            className="thumbnail__link"
+            to={movie.category === "Movie" ? "/movies" : "/tv-series"}
+            aria-label={`${movie.title} thumbnail`}
+          >
+            <picture className="thumbnail__picture">
+              <source
+                media="(min-width: 1000px)"
+                srcSet={movie.thumbnail.regular.large}
+              />
+              <source
+                media="(min-width: 760px)"
+                srcSet={movie.thumbnail.regular.medium}
+              />
+              <img src={movie.thumbnail.regular.small} alt="" />
+            </picture>
+          </Link>
           <div className="thumbnail__content">
             <button className="thumbnail__bookmark">
               {movie.isBookmarked ? (
@@ -49,7 +52,7 @@ function MovieList() {
             </div>
             <h3 className="thumbnail__heading">
               <Link
-                className="thumbnail__link"
+                className="thumbnail__heading--link"
                 to={movie.category === "Movie" ? "/movies" : "/tv-series"}
               >
                 {movie.title}
