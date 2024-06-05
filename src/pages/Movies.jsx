@@ -6,7 +6,6 @@ import MovieList from "../components/lists/MovieList.jsx";
 function Movies() {
   return (
     <div className="layout">
-      <h1 className="recommended__heading">Movies Page</h1>
       <Header />
       <SearchBar
         labelText="Search for movies"
@@ -14,6 +13,7 @@ function Movies() {
       />
       <main>
         <section className="movies">
+          <h1 className="recommended__heading">Movies</h1>
           <MovieList />
         </section>
       </main>
