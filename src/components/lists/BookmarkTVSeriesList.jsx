@@ -13,20 +13,23 @@ function BookmarkTVSeriesList() {
       <ul className="thumbnail__list" role="list">
         {bookmarkedTVShows.map((tvShow) => (
           <li className="thumbnail" key={tvShow.title} role="listitem">
-            <picture className="thumbnail__picture">
-              <source
-                media="(min-width: 1000px)"
-                srcSet={tvShow.thumbnail.regular.large}
-              />
-              <source
-                media="(min-width: 760px)"
-                srcSet={tvShow.thumbnail.regular.medium}
-              />
-              <img
-                src={tvShow.thumbnail.regular.small}
-                alt={`${tvShow.title} thumbnail`}
-              />
-            </picture>
+            <Link
+              className="thumbnail__link"
+              to={tvShow.category === "TV Series" ? "/tv-series" : "/movies"}
+              aria-label={`${tvShow.title} thumbnail`}
+            >
+              <picture className="thumbnail__picture">
+                <source
+                  media="(min-width: 1000px)"
+                  srcSet={tvShow.thumbnail.regular.large}
+                />
+                <source
+                  media="(min-width: 760px)"
+                  srcSet={tvShow.thumbnail.regular.medium}
+                />
+                <img src={tvShow.thumbnail.regular.small} alt="" />
+              </picture>
+            </Link>
             <div className="thumbnail__content">
               <button className="thumbnail__bookmark">
                 {tvShow.isBookmarked ? (
@@ -51,7 +54,7 @@ function BookmarkTVSeriesList() {
               </div>
               <h3 className="thumbnail__heading">
                 <Link
-                  className="thumbnail__link"
+                  className="thumbnail__heading--link"
                   to={
                     tvShow.category === "TV Series" ? "/tv-series" : "/movies"
                   }
